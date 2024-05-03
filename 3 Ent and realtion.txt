@@ -1,0 +1,9 @@
+create database practical;
+show databases;
+use practical;
+create table Adarsh(std_name varchar(20), std_id int(10),std_course varchar(20),std_surname 
+varchar(10));
+insert into Adarsh values('Adarsh',01,'Java','Gurekar');
+insert into Adarsh values('Ankur',02,'html','Takale');
+insert into Adarsh values('yash',03,'Java','kokade');
+select * from Adarsh;

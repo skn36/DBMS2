@@ -1,0 +1,34 @@
+show databases;
+use adarsh;
+show tables;
+create table student_infor(id int(2),name varchar(12),pass varchar(9),mobileno int(10),marks 
+int(2));
+insert into student_infor value(1,'abc','hfgd',537389,76);
+insert into student_infor value(2,'yuc','jh8d',45689,96);
+insert into student_infor value(3,'hfd','yu8d',35689,78);
+insert into student_infor value(4,'opl','lj90',86549,45);
+insert into student_infor value(5,'cds','fdr0',23345,79);
+insert into student_infor value(6,'agh','sdd5',4322,23);
+insert into student_infor value(7,'qwe','pl09',12346,89);
+insert into student_infor value(8,'iop','ew45',87659,34);
+insert into student_infor value(9,'klj','oi98',86589,21);
+select * from student_infor;
+delimiter $$
+create procedure pass_st()
+begin
+declare mrk int;
+declare nm varchar(10);
+declare v_finish int default 0;
+declare cur_1 cursor for select name,marks from student_infor where marks>23;
+declare continue handler for not found set v_finish=1;
+open cur_1;
+get_stud:loop
+fetch cur_1 into nm,mrk;
+select nm,mrk;
+if v_finish=1 then
+leave get_stud;
+end if;
+end loop get_stud;
+end$$
+call pass_st();
+$$

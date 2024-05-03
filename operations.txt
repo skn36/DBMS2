@@ -1,0 +1,25 @@
+Boolean Operations…..
+show databases;
+use practical;
+create table Adarsh4(std_name varchar(20), std_id int(10),std_course varchar(20),std_surname 
+varchar(10));
+insert into Adarsh4 values('Adarsh',01,'Java','Gurekar');
+insert into Adarsh4 values('Ankur',02,'html','Takale');
+insert into Adarsh4 values('yash',03,'Java','kokade');
+select * from Adarsh4;
+select * from Adarsh4 where std_course='html' and std_name='Ankur';
+select * from Adarsh4 where std_course='html' or std_name='Adarsh';
+select * from Adarsh4 where std_id between 01 and 02;
+Arithmetic operations…..
+show databases;
+use practical;
+create table Adarsh5(std_name varchar(20), std_id int(10),std_course varchar(20),std_Fees int, 
+std_hfees int);
+insert into Adarsh5 values('Adarsh',01,'Java',10000,1000);
+insert into Adarsh5 values('Ankur',02,'html',20000,2000);
+insert into Adarsh5 values('yash',03,'Java',30000,3000);
+select * from Adarsh5;
+select std_fees+std_hfees as etotal from Adarsh5;
+select std_fees*std_hfees as etotal from Adarsh5;
+select std_fees-std_hfees as etotal from Adarsh5;
+select std_fees/std_hfees as etotal from Adarsh5;

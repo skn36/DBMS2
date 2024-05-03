@@ -1,0 +1,14 @@
+create database viratk;
+use viratk;
+create table Adarsh2(std_name varchar(20), std_id int(10),std_course varchar(20),std_surname 
+varchar(10), PRIMARY KEY(std_id));
+insert into Adarsh2 values('Adarsh',01,'Java','Gurekar');
+insert into Adarsh2 values('Ankur',02,'html','Takale');
+insert into Adarsh2 values('yash',03,'Java','kokade');
+create table Adarsh3(std_name varchar(20), std_id int(10),std_course varchar(20),std_surname 
+varchar(10), FOREIGN KEY (std_id) references Adarsh2(std_id));
+insert into Adarsh3 values('Adarsh',01,'Java','Gurekar');
+insert into Adarsh3 values('Ankur',02,'html','Takale');
+insert into Adarsh3 values('yash',03,'Java','kokade');
+select * from Adarsh2;
+select * from Adarsh3;

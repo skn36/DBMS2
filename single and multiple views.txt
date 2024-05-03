@@ -1,0 +1,14 @@
+create database khope;
+use khope;
+create table hospital(hosp_name varchar(20),address varchar(20),pincode int);
+insert into hospital values ('A','pune',12345);
+insert into hospital values ('B','mumbai',44354);
+insert into hospital values ('A','kolkata',198262);
+select * from hospital;
+create view yash as 
+select hosp_name,address
+from hospital;
+select * from yash;
+update yash
+set address='pune' 
+where hosp_name='B';

@@ -1,0 +1,26 @@
+DDL commands……
+show databases;
+use practical;
+create table Adarsh1(std_name varchar(20), std_id int(10),std_course varchar(20),std_surname 
+varchar(10));
+insert into Adarsh1 values('Adarsh',01,'Java','Gurekar');
+insert into Adarsh1 values('Ankur',02,'html','Takale');
+insert into Adarsh1 values('yash',03,'Java','kokade');
+select * from Adarsh1;
+alter table Adarsh1
+Add Email varchar(30);
+drop table Adarsh1;
+select * from Adarsh1;
+DML commands…..
+show databases;
+use practical;
+create table Adarsh1(std_name varchar(20), std_id int(10),std_course varchar(20),std_surname 
+varchar(10));
+insert into Adarsh1 values('Adarsh',01,'Java','Gurekar');
+insert into Adarsh1 values('Ankur',02,'html','Takale');
+insert into Adarsh1 values('yash',03,'Java','kokade');
+select * from Adarsh1;
+update Adarsh1 set std_name='Ganesh' where std_id=02;
+select * from Adarsh1;
+delete from Adarsh1 where std_name='Adarsh';
+select * from Adarsh1;
